@@ -21,6 +21,12 @@ public class CategoriaService {
 	 + id + ", Tipo: " + Categoria.class.getName()));	
 		
 	} 
+	
+	//adiconado categoria ao banco de dados
+	public Categoria insert (Categoria obj) {
+		obj.setId(null);
+		return repo.save(obj);
+	}
 
 
 }
